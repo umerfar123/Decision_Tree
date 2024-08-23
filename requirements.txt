@@ -1,0 +1,10 @@
+#Install these libraries(Step:1(readmefile))
+
+scikit-learn
+pandas
+numpy
+seaborn
+matplotlib
+streamlit
+mlxtend
+scipy
