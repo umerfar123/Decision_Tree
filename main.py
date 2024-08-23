@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score
 
 st.title("Decision Tree")
 
-def dtreeanalyzer(md):
+def dtreeanalyzer(md,ct,mst):
 
     df=pd.read_csv("hyperplane.csv")
 
@@ -19,7 +19,7 @@ def dtreeanalyzer(md):
     fig, ax = plt.subplots()
 
     x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.3,random_state=42)
-    dt=DecisionTreeClassifier(max_depth=md)
+    dt=DecisionTreeClassifier(max_depth=md,criterion=ct,min_samples_split=mst)
     dt.fit(x_train,y_train)
     
     y_pred=dt.predict(x_test)
@@ -35,11 +35,14 @@ def dtreeanalyzer(md):
     st.pyplot(fig)
 
  
+crt=['gini','entropy','log_loss']
 
 mxd=st.sidebar.slider("Select Depth Of Tree",min_value=1,max_value=20)
+mst=st.sidebar.slider("Minimun No.of Samples for Splitting a Node",min_value=2)
+ct=st.sidebar.selectbox("Select Criterion",options=crt)
    
 if st.button("Run"):
-    dtreeanalyzer(mxd)
+    dtreeanalyzer(mxd,ct,mst)
     
 
 
