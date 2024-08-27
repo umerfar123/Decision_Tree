@@ -1,6 +1,6 @@
-# **um-Decision_Tree**
+# Decision_Tree
 
-## **Introduction**
+## Introduction
 
 A streamlit project for better understanding Decison Trees, Use It For Learning Decision Trees Easily.
 
@@ -10,6 +10,13 @@ The simple way to understand this is to create a streamlit app that allows you t
 
 
 ## **Steps To Implement This Simple Project:**
-1.  Install the libraries specified in requirements.txt(pip install -r requirements.txt)
-2.   Run the main.py (streamlit run main.py)
-3.  Run all Commands in vscode terminal
+
+1.  Install the libraries specified in requirements.txt
+   ``` python
+      pip install -r requirements.txt
+   ```
+2.   Run the main.py
+   ```python
+     Streamlit run main.py
+   ```
+3.  Adjust the hyperparameters to see the difference in model
